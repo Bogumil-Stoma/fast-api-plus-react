@@ -3,10 +3,10 @@ from typing import Union
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text
-from database import get_db
-from models import User
-from schema import UserCreate
-from crud import create_user
+from database.database import get_db
+from models.user_model import User
+from schemas.user_schema import UserCreate
+from services.user_service import create_user
 
 app = FastAPI()
 
